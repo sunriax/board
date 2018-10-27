@@ -50,16 +50,16 @@ The display layout is designed to adapt an LCD Display (e.g. Displaytech 162A/B)
 
 ![Schematic Description](https://raw.githubusercontent.com/sunriax/board/master/display/doc/adapter_TOP.png "Schematic Description")
 
-[Schematic PDF](https://raw.githubusercontent.com/sunriax/board/master/display/doc/adapter_TOP.pdf)
+[TOP Layer PDF](https://raw.githubusercontent.com/sunriax/board/master/display/doc/adapter_TOP.pdf)
 
 ### BOTTOM Layer
 
 ![Schematic Description](https://raw.githubusercontent.com/sunriax/board/master/display/doc/adapter_BOT.png "Schematic Description")
 
-[Schematic PDF](https://raw.githubusercontent.com/sunriax/board/master/display/doc/adapter_BOT.pdf)
+[BOTTOM Layer PDF](https://raw.githubusercontent.com/sunriax/board/master/display/doc/adapter_BOT.pdf)
 
 ### COMPONENT Layer
 
 ![Schematic Description](https://raw.githubusercontent.com/sunriax/board/master/display/doc/adapter_COM.png "Schematic Description")
 
-[Schematic PDF](https://raw.githubusercontent.com/sunriax/board/master/display/doc/adapter_COM.pdf)
+[COMPONENT PDF](https://raw.githubusercontent.com/sunriax/board/master/display/doc/adapter_COM.pdf)
