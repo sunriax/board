@@ -6406,7 +6406,7 @@ The Slot footprint only works if the mill layer is transmitted to the PCB fab ho
 </classes>
 <parts>
 <part name="DISPLAY" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X16" device="" package3d_urn="urn:adsk.eagle:package:22432/2"/>
-<part name="TM1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="TRIMPOT" device="TC33X" value="200"/>
+<part name="TM1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="TRIMPOT" device="TC33X" value="500"/>
 <part name="GND1" library="0_HTL_analog" deviceset="GND" device=""/>
 <part name="GND2" library="0_HTL_analog" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
