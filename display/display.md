@@ -8,10 +8,10 @@ The display layout is designed to adapt an LCD Display (e.g. Displaytech 162A/B)
 
 ### JPW
 
-| PIN | Function   | Description                           |
-|:---:|:-----------|:--------------------------------------|
-| 1-2 | R/W        | Read/Write mode enable through PIN5   |
-| 2-3 | W (always) | Write mode only (PIN5 has no function |
+| PIN | Function   | Description                            |
+|:---:|:-----------|:---------------------------------------|
+| 1-2 | R/W        | Read/Write mode setup through PIN5     |
+| 2-3 | W (always) | Write mode only (PIN5 has no function) |
 
 ### J5V
 
