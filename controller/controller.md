@@ -6,6 +6,27 @@ The controller layout is designed to adapt an LCD Display (e.g. Displaytech 162A
 
 ## Connection
 
+### DISPLAY
+
+| PIN | Function | Description                              |
+|:---:|:---------|:-----------------------------------------|
+| 1   | A        | Backlight anode                          |
+| 2   | K        | Backlight cathode                        |
+| 3   | VSS      | Ground (0V)                              |
+| 4   | VDD      | Supply voltage (5V)                      |
+| 5   | VO       | Contrast Voltage                         |
+| 6   | RS       | HIGH=Data Signal/LOW=Instruction Signal  | 
+| 7   | R/W      | Connected to ground (0V)                 |
+| 8   | E        | Chip enable signal                       |
+| 9   | DB0      | Data bit 0 (not connected)               |
+| 10  | DB1      | Data bit 1 (not connected)               |
+| 11  | DB2      | Data bit 2 (not connected)               |
+| 12  | DB3      | Data bit 3 (not connected)               |
+| 13  | DB4      | Data bit 4                               |
+| 14  | DB5      | Data bit 5                               |
+| 15  | DB6      | Data bit 6                               |
+| 16  | DB7      | Data bit 7                               |
+
 ### ISP
 
 | PIN | Function | Description                              |
