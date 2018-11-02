@@ -2,8 +2,7 @@
 
 ## Introduction
 
-The controller layout is designed to adapt an LCD Display (e.g. Displaytech 162A/B) and control Text and other stuff through USB (UART). It can be powered through the mini USB jack. If the controller is used the first time, it it necessary to throw the bootloader on the chip. Later there will be a hex file or a link to it in this repository. Actually the design isn´t complete. So it may take a while until it gets finished.
-
+The controller layout is designed to adapt an LCD Display (e.g. Displaytech 162A/B) and control Text and other stuff through USB (UART). It can be powered through the mini USB jack. If the controller is used the first time, it it necessary to throw the bootloader on the chip. Later there will be a hex file or a link to it in this repository. The first version of the design is now available.
 
 ## Connection
 
@@ -23,3 +22,23 @@ The controller layout is designed to adapt an LCD Display (e.g. Displaytech 162A
 ![Schematic Description](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_SCH.png "Schematic Description")
 
 [Schematic PDF](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_SCH.pdf)
+
+## Board
+
+### TOP Layer
+
+![TOP Layer Description](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_TOP.png "TOP Layer Description")
+
+[TOP Layer PDF](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_TOP.pdf)
+
+### BOTTOM Layer
+
+![BOTTOM Layer Description](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_BOT.png "BOTTOM Layer Description")
+
+[BOTTOM Layer PDF](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_BOT.pdf)
+
+### COMPONENT Layer
+
+![COMPONENT Layer Description](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_COM.png "COMPONENT Layer Description")
+
+[COMPONENT PDF](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_COM.pdf)

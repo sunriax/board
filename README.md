@@ -9,6 +9,7 @@ The BOARD repository is a set of Schematic and PCB files which can be used to bu
 ## Layouts
 
 * [LCD Display Adapter](./display/display.md)
+* [LCD Display Controller](./controller/controller.md)
 
 ## Important Notice
 
