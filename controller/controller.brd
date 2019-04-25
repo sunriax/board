@@ -2977,7 +2977,6 @@ design rules under a new name.</description>
 <contactref element="R11" pad="E"/>
 <contactref element="R8" pad="1"/>
 <contactref element="DISPLAY" pad="4"/>
-<contactref element="F1" pad="2"/>
 <contactref element="C5" pad="1"/>
 <contactref element="C4" pad="1"/>
 <contactref element="C3" pad="1"/>
@@ -3081,6 +3080,7 @@ design rules under a new name.</description>
 <vertex x="34.036" y="15.748"/>
 <vertex x="33.782" y="15.494"/>
 </polygon>
+<contactref element="F1" pad="2"/>
 </signal>
 <signal name="N$3">
 <contactref element="USB" pad="2"/>
