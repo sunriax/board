@@ -40,26 +40,36 @@ The controller layout is designed to adapt an LCD Display (e.g. Displaytech 162A
 
 ## Schematic
 
-![Schematic Description](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_SCH.png "Schematic Description")
+![Schematic Description](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/board_schematic.png "Schematic Description")
 
-[Schematic PDF](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_SCH.pdf)
+[Schematic PDF](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/board_schematic.pdf)
 
 ## Board
 
+
+### All Layers
+
+![BOARD Layer Description](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/board.png "BOARD Layer Description")
+
+[BOARD PDF](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/board.pdf)
+
+
 ### TOP Layer
 
-![TOP Layer Description](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_TOP.png "TOP Layer Description")
+![TOP Layer Description](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/board_top.png "TOP Layer Description")
 
-[TOP Layer PDF](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_TOP.pdf)
+[TOP Layer PDF](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/board_top.pdf)
+
+![TOP Layer Place](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/board_tplace.png "TOP Layer Place")
+
+[TOP Layer PDF](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/board_tplace.pdf)
 
 ### BOTTOM Layer
 
-![BOTTOM Layer Description](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_BOT.png "BOTTOM Layer Description")
+![BOTTOM Layer Description](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/board_bot.png "BOTTOM Layer Description")
 
-[BOTTOM Layer PDF](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_BOT.pdf)
+[BOTTOM Layer PDF](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/board_bot.pdf)
 
-### COMPONENT Layer
+![BOTTOM Layer Place](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/board_bplace.png "BOTTOM Layer Place")
 
-![COMPONENT Layer Description](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_COM.png "COMPONENT Layer Description")
-
-[COMPONENT PDF](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/controller_COM.pdf)
+[BOTTOM Layer PDF](https://raw.githubusercontent.com/sunriax/board/master/controller/doc/board_bplace.pdf)
