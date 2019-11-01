@@ -25,4 +25,4 @@ You can find more additional information in the [manual](https://github.com/sunr
 If there are any further questions feel free to start an issue or contact us, we try to react as quick as possible.
 
 ---
-**R. GÄCHTER, Rankweil Oct/2018**
+**R. GÄCHTER, Rankweil Oct/2019**

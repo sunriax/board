@@ -46,6 +46,12 @@ The controller layout is designed to adapt an LCD Display (e.g. Displaytech 162A
 
 ## Board
 
+### Bill of material
+
+Necessary parts to build the board are documented in the THT and SMD bill of material list. We recommend to buy the parts at [RS-Components](https://at.rs-online.com/). The related numbers are deposited at the bill of material lists.
+
+* [Bill of material THT](./partlist.csv)
+* [Bill of material SMD](./partlist_SMD.csv)
 
 ### All Layers
 
