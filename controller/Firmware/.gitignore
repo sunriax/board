@@ -1,17 +1,19 @@
 # Project Files
 .vs/
 
-*.cproj
-*.atsln
-*.xml
+!*.cproj
+!*.atsln
+!*.xml
+!*.c
+!*.hex
+!*.elf
+!*.eep
 
 # Object files
 *.o
 *.ko
 *.obj
-*.elf
 *.d
-*.eep
 
 # Precompiled Headers
 *.gch
@@ -35,7 +37,6 @@
 *.app
 *.i*86
 *.x86_64
-*.hex
 
 # Debug files
 *.dSYM/
