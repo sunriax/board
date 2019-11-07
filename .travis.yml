@@ -27,12 +27,12 @@ script:
   - cd controller/Firmware/Bootloader/Release
   - mkdir src
   - make
-  - cd ../../../../../
-  - cd controller/Firmware/Bootloader/Controller/Release
+  - cd ../../
+  - cd ./Controller/Release
   - mkdir src
   - make
-  - cd ../../../../../
-  - cd controller/Firmware/Bootloader/Library/Release
+  - cd ../../
+  - cd ./Library/Release
   - mkdir src
   - make
-  - cd ../../../../../
+  - cd ../../
