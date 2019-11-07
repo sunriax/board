@@ -28,11 +28,11 @@ script:
   - mkdir src
   - make
   - cd ../../../../
-  - cd controller/Firmware/Bootloader/Controller
+  - cd controller/Firmware/Bootloader/Controller/Release
   - mkdir src
   - make
   - cd ../../../../
-  - cd controller/Firmware/Bootloader/Library
+  - cd controller/Firmware/Bootloader/Library/Release
   - mkdir src
   - make
   - cd ../../../../

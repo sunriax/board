@@ -2,7 +2,11 @@
 
 ## Introduction
 
-The controller layout is designed to adapt an LCD Display (e.g. Displaytech 162A/B) and control Text and other stuff through USB (UART). It can be powered through the mini USB jack. If the controller is used the first time, it it necessary to throw the bootloader on the chip. Later there will be a hex file or a link to it in this repository. The first version of the design is now available.
+The controller layout is designed to adapt an LCD Display (e.g. Displaytech 162A/B) and control Text and other stuff through USB (UART). It can be powered through the mini USB jack. If the controller is used the first time, it it necessary to throw the [Bootloader](./Firmware/firmware.md) on the chip.
+
+## Firmware
+
+In [Firmware](./Firmware/firmware.md) repository the additional software to control the display is stored.
 
 ## Connection
 

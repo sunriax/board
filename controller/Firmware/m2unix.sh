@@ -77,7 +77,7 @@ if [ "$PROJECT_DIR" = "-h" ] || [ "$PROJECT_DIR" = "" ] || [ ! -d "$PROJECT_DIR"
     fi
     exit 1
 else
-    TARGET_DIR=${PROJECT_DIR}/Debug
+    TARGET_DIR=${PROJECT_DIR}/Release
     TARGET_MAKEFILE=${TARGET_DIR}/Makefile
     AVR_GCC_VERSION=$(avr-gcc --version | grep ^avr-gcc | sed 's/^.* //g')
     
@@ -90,6 +90,6 @@ else
     sed -i 's/C:\\Program Files (x86)\\Atmel\\Studio\\7.0\\toolchain\\avr8\\avr8-gnu-toolchain\\bin\\avr-/\/usr\/bin\/avr-/g' ${TARGET_MAKEFILE}
     sed -i 's/.exe//g' ${TARGET_MAKEFILE}
     echo ''
-    echo '*** convertASMakefileToUnix has finished ***'
+    echo '*** m2unix.sh has finished ***'
     exit 0
 fi
