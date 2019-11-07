@@ -9,6 +9,8 @@
 !*.elf
 !*.eep
 
+**/[Dd]ebug/
+
 # Object files
 *.o
 *.ko

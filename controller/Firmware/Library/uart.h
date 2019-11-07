@@ -2,10 +2,10 @@
  * SUNriaX Project
  * www.sunriax.at
  * -------------------------------------
- * Hardware: Controller
- * Platform: ATmega8
+ * Hardware: STKX00
+ * Platform: ATmeag8/16/2560
  * -------------------------------------
- * Name: uart
+ * Name: adc
  * Ver.: 1.0 Release
  * Type: Library
  * Text: Routines for initializing and
@@ -28,29 +28,27 @@
 	#define BAUD 9600UL
 #endif
 
-// Datasize
-// 5 = 5 bit mode
-// 6 = 6 bit mode
-// 7 = 7 bit mode
-// 8 = 8 bit mode
-#ifndef DATASIZE
-	#define DATASIZE 8
+#ifndef DATASIZE	//UART datasize
+	#define DATASIZE 0x08	// 5 Bit = 0x05
+							// 6 Bit = 0x06
+							// 7 Bit = 0x07
+							// 8 Bit = 0x08
 #endif
 
-// Parity
-// 0 = None
-// 1 = Reserved
-// 2 = Even
-// 3 = Odd
 #ifndef PARITY
-	#define PARITY 0
+	#define PARITY 0x00		// 0x00 = None
+							// 0x01 = Reserved
+							// 0x02 = Even Parity
+							// 0x03 = Odd Parity
 #endif
 
-// Stopbit
-// 1 = 1 Stop bit
-// 2 = 2 Stop bit
 #ifndef STOPBITS
-	#define STOPBITS 1
+	#define STOPBITS 0x01	// 0x01 = 1 Stopbit
+							// 0x02 = 2 Stopbit
+#endif
+
+#ifndef U2XEN	// Sample rate (defined = 8 Samples/Bit | undefined = 16 Samples/Bit)
+	#define U2XEN
 #endif
 
 // Definition of UART processing (Enabled = Interrupt/Disabled = Polling)
@@ -77,55 +75,63 @@
 //	#endif
 //#endif
 
-// Definition of flow control characters
-#ifndef SOFT_CTRL
-	#define SOFT_CTRL
-	
-	#ifndef XON
-		#define XON 0x11
-	#endif
+// UART
+#ifndef UART_DDR
+	#define UART_DDR  DDRD
+#endif
 
-	#ifndef XOFF
-		#define XOFF 0x13
+#ifndef UART_PORT
+	#define UART_PORT PORTD
+#endif
+
+#ifndef UART_PIN
+	#define UART_PIN PIND
+#endif
+
+#ifndef CTS
+	#define CTS PD4
+	
+	#ifndef CTS_PULLUP
+		#define CTS_PULLUP
 	#endif
 #endif
 
-typedef enum {
-	NUL=0,
-	CR=1,
-	LF=2,
-	CRLF=3,
-	TAB=4,
-	SPACE=5,
-	ESC=6,
-	NONE=7
-} line_t;
+#ifndef RTS
+	#define RTS PD5
+#endif
 
-typedef enum {
-	OFF=0,
-	ON=1,
-} echo_t;
-
+#include <stdlib.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include <util/setbaud.h>
 
 void uart_init(void);
 void uart_disable(void);
-void uart_clear(void);
+void uart_reset(void);
+
+#ifdef RTS
+	void uart_rts(unsigned char status);
+#endif
+
+#ifdef CTS
+	unsigned char uart_cts(void);
+#endif
 
 #ifndef UARTTXCIE
 	#ifndef UARTUDRIE
-		void uart_setchar(char data);
-		void uart_setstring(char *string, line_t delimiter);
-		void uart_xon(void);
-		void uart_xoff(void);
+		void uart_setchar(unsigned char data);
+		void uart_setstring(char *string);
+		void uart_setvalue(unsigned char data, unsigned char radix);
+		
+		void uart_linebreak(void);
+		void uart_2linebreak(void);
+		void uart_delimiter(unsigned char delimiter);
+		
 	#endif
 #endif
 
 #ifndef UARTRXCIE
-	unsigned char uart_getchar(char *data, echo_t status);
-	unsigned char uart_getstring(char *string, unsigned char length, echo_t status);
+	unsigned char uart_getchar(unsigned char *data, unsigned char echo);
+	unsigned char uart_getstring(unsigned char *string, unsigned char length, unsigned char delimiter, unsigned char echo);
 #endif
 
 #endif /* UART_H_ */

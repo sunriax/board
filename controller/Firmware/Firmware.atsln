@@ -7,6 +7,8 @@ Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Bootloader", "Bootloader\Bo
 EndProject
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Controller", "Controller\Controller.cproj", "{3CBEC2FE-206A-41D4-8083-5888F6219C80}"
 EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Library", "Library\Library.cproj", "{4C32580D-EBE5-4DE2-AE92-215876F4204F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
@@ -21,6 +23,10 @@ Global
 		{3CBEC2FE-206A-41D4-8083-5888F6219C80}.Debug|AVR.Build.0 = Debug|AVR
 		{3CBEC2FE-206A-41D4-8083-5888F6219C80}.Release|AVR.ActiveCfg = Release|AVR
 		{3CBEC2FE-206A-41D4-8083-5888F6219C80}.Release|AVR.Build.0 = Release|AVR
+		{4C32580D-EBE5-4DE2-AE92-215876F4204F}.Debug|AVR.ActiveCfg = Debug|AVR
+		{4C32580D-EBE5-4DE2-AE92-215876F4204F}.Debug|AVR.Build.0 = Debug|AVR
+		{4C32580D-EBE5-4DE2-AE92-215876F4204F}.Release|AVR.ActiveCfg = Release|AVR
+		{4C32580D-EBE5-4DE2-AE92-215876F4204F}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

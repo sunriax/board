@@ -1,0 +1,38 @@
+# Travis CI for compiling Atmel Studio 7 Solution
+# -----------------------------------------------
+language: c
+sudo: false
+
+# Dependencies
+addons:
+  apt:
+    packages:
+      - binutils-avr
+      - avr-libc
+      - gcc-avr
+
+install:
+  - avr-gcc --version
+  - make --version
+
+# Execute Commands bevor Build
+before_script:
+  - chmod 0777 controller/Firmware/m2unix.sh
+  - controller/Firmware/m2unix.sh controller/Firmware/Bootloader/
+  - controller/Firmware/m2unix.sh controller/Firmware/Controller/
+  - controller/Firmware/m2unix.sh controller/Firmware/Library/
+
+# Run Build Script
+script:
+  - cd controller/Firmware/Bootloader/Release
+  - mkdir src
+  - make
+  - cd ../../../../
+  - cd controller/Firmware/Bootloader/Controller
+  - mkdir src
+  - make
+  - cd ../../../../
+  - cd controller/Firmware/Bootloader/Library
+  - mkdir src
+  - make
+  - cd ../../../../

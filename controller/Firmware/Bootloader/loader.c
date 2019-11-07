@@ -1,14 +1,26 @@
-/*
- * loader.c
- *
- * Created: 02.11.2019 11:28:55
- *  Author: sunriax
- */ 
+/* -------------------------------------
+ * SUNriaX Project
+ * www.sunriax.at
+ * -------------------------------------
+ * Hardware: Controller
+ * Platform: ATmega8
+ * -------------------------------------
+ * Name: loader
+ * Ver.: 1.0 Release
+ * Type: Library
+ * Text: Routines for converting bytes
+ *       and word and write pages to
+ *       flash memory
+ * -------------------------------------
+ */
 
 #include "loader.h"
+#include "uart.h"
 
 void program(unsigned long page, unsigned char *buffer)
 {
+	unsigned char temp = SREG;
+	
 	cli();
 	
 	eeprom_busy_wait();
@@ -18,11 +30,9 @@ void program(unsigned long page, unsigned char *buffer)
 	
 	for(unsigned char i=0; i < SPM_PAGESIZE; i += 2)
 	{
-		unsigned int word = *buffer;
-		buffer++;
 		
-		word = (*buffer<<8);
-		buffer++;
+		unsigned int word = *buffer++;
+		word += ((*buffer++)<<8);
 		
 		boot_page_fill((page + i), word);
 	}
@@ -32,6 +42,8 @@ void program(unsigned long page, unsigned char *buffer)
 	boot_rww_enable();
 	
 	sei();
+	
+	SREG = temp;
 }
 
 // 0x010F
@@ -49,32 +61,23 @@ unsigned char hex2byte(char *ascii)
 {
 	unsigned char byte = 0;
 	
-	for (unsigned char i=0; i < 2; i++)
-	{
-		if(ascii[i] >= '0' && ascii[i] <= '9')
+	for(unsigned char i=0; i < 2; i++)
+	{	
+		if((*ascii >= '0') && (*ascii <= '9'))
 		{
-			byte += (ascii[i] - '0') * rad(16, (1 - i));
+			byte += ((*ascii - '0')<<((1 - i) * 4));
 		}
-		else if(ascii[i] >= 'A' && ascii[i] <= 'F')
+		else if((*ascii >= 'A') && (*ascii <= 'F'))
 		{
-			byte += (ascii[i] - 'A' + 10) * rad(16, (1 - i));
+			byte += ((*ascii - 'A' + 10)<<((1 - i) * 4));
 		}
-		else if(ascii[i] >= 'a' && ascii[i] <= 'f')
+		else if((*ascii >= 'a') && (*ascii <= 'f'))
 		{
-			byte += (ascii[i] - 'a' + 10) * rad(16, (1 - i));
+			byte += ((*ascii - 'a' + 10)<<((1 - i) * 4));
 		}
+		ascii++;
 	}
+	
+	ascii -= 2;
 	return byte;
-}
-
-unsigned int rad(unsigned char radix, unsigned char position)
-{
-	unsigned char number = 1;
-	
-	for (unsigned char i=0; i < position; i++)
-	{
-		number *= radix;
-	}
-	
-	return number;
 }

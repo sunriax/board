@@ -1,13 +1,23 @@
-/*
- * loader.h
- *
- * Created: 02.11.2019 11:28:46
- *  Author: sunriax
- */ 
-
+/* -------------------------------------
+ * SUNriaX Project
+ * www.sunriax.at
+ * -------------------------------------
+ * Hardware: Controller
+ * Platform: ATmega8
+ * -------------------------------------
+ * Name: loader
+ * Ver.: 1.0 Release
+ * Type: Library
+ * Text: Routines for converting bytes
+ *       and word and write pages to
+ *       flash memory
+ * -------------------------------------
+ */
 
 #ifndef LOADER_H_
 #define LOADER_H_
+
+#define LINE_LENGTH 0x10
 
 #include <stdlib.h>
 #include <avr/io.h>
@@ -30,6 +40,5 @@ typedef enum {
 void program(unsigned long page, unsigned char *buffer);
 unsigned int hex2word(char *ascii);
 unsigned char hex2byte(char *ascii);
-unsigned int rad(unsigned char radix, unsigned char position);
 
 #endif /* LOADER_H_ */
